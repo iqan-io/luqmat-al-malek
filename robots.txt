@@ -1,0 +1,3 @@
+# Unapproved client preview. Not the live site for this business.
+User-agent: *
+Disallow: /

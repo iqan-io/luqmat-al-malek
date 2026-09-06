@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luqmat Al Malek — The King's Bite | Halal Subs &amp; Burgers, Bank St Ottawa</title>
+<meta name="description" content="Luqmat Al Malek — لقمة الملك. Loaded subs, shawarma, tawouk, crispy chicken, burgers, wings and poutine on Bank Street, Ottawa. Every bite fit for a king.">
+<meta name="theme-color" content="#0B0A09">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Luqmat Al Malek — The King's Bite">
+<meta property="og:description" content="Loaded subs, shawarma, tawouk, crispy chicken and burgers. 1749 Bank St, Unit 1, Ottawa.">
+<meta property="og:image" content="media/hero-poster.jpg">
+
+<link rel="icon" href="media/crest-sm.png">
+
+<!-- First film frame, per cut. `media` means only the matching one is ever
+     fetched, so the phone never pays for the landscape frame it will not use.
+     This is the single frame standing between the loader and first paint. -->
+<link rel="preload" as="image" href="media/frames/f_0001.jpg" media="(min-aspect-ratio: 1/1)">
+<link rel="preload" as="image" href="media/frames-9x16/f_0001.jpg" media="(max-aspect-ratio: 1/1)">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#menu">Skip to menu</a>
+
+<!-- ══ NAV ══ -->
+<header class="nav" id="nav">
+  <a class="nav__crest" href="#top" aria-label="Luqmat Al Malek — home">
+    <img src="media/crest-sm.png" alt="" width="44" height="44" decoding="async">
+    <span class="nav__wordmark">
+      <span class="nav__ar">لقمة الملك</span>
+      <span class="nav__en">Luqmat Al Malek</span>
+    </span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#story">The House</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn btn--gold nav__cta" href="https://www.doordash.com/en-CA/store/luqmat-al-malek-ottawa-51177463/" target="_blank" rel="noopener">Order Now</a>
+</header>
+
+<!-- ══ HERO ══ -->
+<main id="top">
+<section class="film" id="film">
+
+  <!-- Loader: the film must not start mid-decode. -->
+  <div class="film__loader" id="filmLoader" aria-hidden="true">
+    <span class="film__loadmark">لقمة الملك</span>
+    <span class="film__bar"><i id="filmBar"></i></span>
+  </div>
+
+  <!-- Scroll driver. Height drives film duration; the stage inside is sticky. -->
+  <div class="film__driver" id="filmDriver">
+    <div class="film__stage">
+
+      <canvas class="film__canvas" id="filmCanvas"
+              aria-label="A crispy chicken burger being built at the Luqmat Al Malek counter"
+              role="img"></canvas>
+
+      <div class="film__scrim"   aria-hidden="true"></div>
+      <div class="film__vignette" aria-hidden="true"></div>
+      <div class="film__grain"   aria-hidden="true"></div>
+      <div class="film__seam"    id="filmSeam" aria-hidden="true"></div>
+
+      <!-- ── BEATS: copy over the film, driven by the same progress tick ── -->
+
+      <!-- BEATS AND THE TWO CUTS (D-018).
+           `data-film` scopes a beat to one cut; `both` means it plays over
+           either. Shared beats also carry `data-tall-*` timings because the
+           portrait take moves faster — its crown lands at 0.24, the landscape
+           take's not until 0.70. The middle beats are not shared at all: the
+           two cuts show different actions in a different order, and the
+           portrait one ends wrapped rather than plated. -->
+
+      <!-- Hero beat must be lit at scroll 0. -->
+      <div class="beat beat--hero" data-film="both"
+           data-in="-0.1" data-peak="0" data-out="0.19"
+           data-tall-in="-0.1" data-tall-peak="0" data-tall-out="0.13">
+        <div class="beat__inner">
+          <p class="eyebrow"><span class="rule"></span> Bank Street · Ottawa</p>
+
+          <h1 class="hero__h1">
+            <span class="hero__ar">لقمة الملك</span>
+            <span class="hero__line">Every&nbsp;bite</span>
+            <span class="hero__line hero__line--em"><em>fit for a king</em></span>
+          </h1>
+
+          <p class="hero__sub">
+            Loaded subs, shawarma, tawouk, crispy chicken, burgers, wings and poutine —
+            built to order over the griddle, the way it is done back home.
+          </p>
+
+          <p class="hero__addr">
+            <span>1749 Bank St, Unit&nbsp;1</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <span>Ottawa, ON K1V&nbsp;7Z4</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ── 16:9 cut: cheese drape → dressing → crown ── -->
+      <div class="beat beat--right" data-film="wide" data-in="0.20" data-peak="0.28" data-out="0.40">
+        <div class="beat__inner">
+          <p class="beat__num">I</p>
+          <h2 class="beat__h">The fillet,<br><em>then the cheese</em></h2>
+        </div>
+      </div>
+
+      <div class="beat beat--left" data-film="wide" data-in="0.41" data-peak="0.50" data-out="0.61">
+        <div class="beat__inner">
+          <p class="beat__num">II</p>
+          <h2 class="beat__h">Dressed<br><em>by hand</em></h2>
+        </div>
+      </div>
+
+      <div class="beat beat--right" data-film="wide" data-in="0.62" data-peak="0.70" data-out="0.80">
+        <div class="beat__inner">
+          <p class="beat__num">III</p>
+          <h2 class="beat__h">The crown<br><em>goes on</em></h2>
+        </div>
+      </div>
+
+      <!-- ── 9:16 cut: the crown lands early, then it is wrapped to travel ── -->
+      <div class="beat beat--right" data-film="tall" data-in="0.15" data-peak="0.24" data-out="0.33">
+        <div class="beat__inner">
+          <p class="beat__num">I</p>
+          <h2 class="beat__h">The crown<br><em>goes on</em></h2>
+        </div>
+      </div>
+
+      <div class="beat beat--left" data-film="tall" data-in="0.35" data-peak="0.44" data-out="0.55">
+        <div class="beat__inner">
+          <p class="beat__num">II</p>
+          <h2 class="beat__h">Dressed<br><em>by hand</em></h2>
+        </div>
+      </div>
+
+      <div class="beat beat--right" data-film="tall" data-in="0.62" data-peak="0.74" data-out="0.84">
+        <div class="beat__inner">
+          <p class="beat__num">III</p>
+          <h2 class="beat__h">Wrapped<br><em>to travel</em></h2>
+        </div>
+      </div>
+
+      <!-- Finale: data-out &gt; 1.5 means it never fades. Anchored left so the
+           centred burger in the closing frame stays the hero. -->
+      <div class="beat beat--finale" data-film="both"
+           data-in="0.86" data-peak="0.95" data-out="2"
+           data-tall-in="0.86" data-tall-peak="0.95" data-tall-out="2">
+        <div class="beat__inner">
+          <p class="beat__num">IV</p>
+          <h2 class="beat__h">The Apollo,<br><em>built to order</em></h2>
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="https://www.doordash.com/en-CA/store/luqmat-al-malek-ottawa-51177463/" target="_blank" rel="noopener">Order for delivery</a>
+            <a class="btn btn--ghost" href="#menu">See the menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter readout: narrative and progress in one. -->
+      <div class="film__readout" aria-hidden="true">
+        <span class="film__chapter" id="filmChapter">The Fillet</span>
+        <span class="film__track"><i id="filmProgress"></i></span>
+      </div>
+
+      <div class="film__scroll" id="filmScrollCue" aria-hidden="true"><span></span>Scroll</div>
+
+    </div>
+  </div>
+
+  <!-- Landing zone: melts the film's final frame (#685E4F) into the page ground. -->
+  <div class="film__land" aria-hidden="true"></div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Loaded Subs</span><span class="ticker__d">✦</span>
+    <span>Shawarma</span><span class="ticker__d">✦</span>
+    <span>Tawouk</span><span class="ticker__d">✦</span>
+    <span>Crispy Chicken</span><span class="ticker__d">✦</span>
+    <span>Kafta</span><span class="ticker__d">✦</span>
+    <span>Sujuk</span><span class="ticker__d">✦</span>
+    <span>Makanek</span><span class="ticker__d">✦</span>
+    <span>Wings</span><span class="ticker__d">✦</span>
+    <span>Poutine</span><span class="ticker__d">✦</span>
+    <span>Loaded Subs</span><span class="ticker__d">✦</span>
+    <span>Shawarma</span><span class="ticker__d">✦</span>
+    <span>Tawouk</span><span class="ticker__d">✦</span>
+    <span>Crispy Chicken</span><span class="ticker__d">✦</span>
+    <span>Kafta</span><span class="ticker__d">✦</span>
+    <span>Sujuk</span><span class="ticker__d">✦</span>
+    <span>Makanek</span><span class="ticker__d">✦</span>
+    <span>Wings</span><span class="ticker__d">✦</span>
+    <span>Poutine</span><span class="ticker__d">✦</span>
+  </div>
+</div>
+
+<!-- ══ STORY ══ -->
+<section class="story" id="story">
+  <div class="wrap story__grid">
+    <div class="story__lead reveal">
+      <p class="eyebrow"><span class="rule"></span> The House</p>
+      <h2 class="h2">A counter on Bank Street,<br><em>and a name that sets the bar.</em></h2>
+    </div>
+    <div class="story__body reveal">
+      <p class="lede">
+        <span class="drop">L</span>uqmat Al Malek means <em>the king's bite</em>. It is a
+        high standard to put on a sign, and it is the whole point: nothing leaves the pass
+        that you would not be proud to hand to someone you love.
+      </p>
+      <p>
+        The griddle runs hot all evening. Bread is pressed to order, chicken comes out of
+        the fryer when you ask for it, and the sauces — the tarator, the garlic, the
+        signature <em>Rosto Al&nbsp;Malek</em> — are the reason people come back and order
+        the same thing twice.
+      </p>
+      <p>
+        This is Lebanese street food as it is actually eaten: fast, generous, unfussy, and
+        seasoned by someone who cares whether you finish it.
+      </p>
+    </div>
+  </div>
+
+  <ul class="pillars wrap">
+    <li class="pillar reveal"><span class="pillar__n">i</span><h3>Built to order</h3><p>Nothing sits under a lamp. Your sandwich is assembled when you order it, and it reaches you hot.</p></li>
+    <li class="pillar reveal"><span class="pillar__n">ii</span><h3>Lebanese, specifically</h3><p>Biwaz, tarator, garlic sauce and a fries sandwich that has no business being this good.</p></li>
+    <li class="pillar reveal"><span class="pillar__n">iii</span><h3>Late by design</h3><p>The kitchen is open when you actually want it — long past the point most places have closed the griddle.</p></li>
+  </ul>
+</section>
+
+<!-- ══ MENU ══ -->
+<!-- ══ THE LINE-UP ══ -->
+<section class="lineup" id="lineup">
+  <div class="wrap">
+    <header class="chapt reveal">
+      <span class="chapt__n">// 01.</span>
+      <h2 class="h2">The line-up</h2>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__shot">
+          <img src="media/menu/apollo-burger.jpg" alt="The Apollo Burger — crispy chicken, melted cheese, lettuce and tomato" loading="lazy" decoding="async" width="1100" height="825">
+          <span class="card__flag">Best seller</span>
+        </div>
+        <h3 class="card__name">Apollo Burger <b>$14.99</b></h3>
+        <p class="card__desc">Golden crispy chicken with lettuce, tomatoes, melted cheese &amp; creamy mayo.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__shot">
+          <img src="media/menu/beef-shawarma-pita.jpg" alt="Beef Shawarma Pita with biwaz salad, tarator, pickles and tomatoes" loading="lazy" decoding="async" width="1100" height="825">
+        </div>
+        <h3 class="card__name">Beef Shawarma Pita <b>$15.99</b></h3>
+        <p class="card__desc">Tender seasoned beef shawarma with fresh biwaz salad, creamy tarator, pickles &amp; tomatoes.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__shot">
+          <img src="media/menu/lebanese-fries-sandwich.jpg" alt="Lebanese Fries Sandwich — fries, garlic sauce, pickles and coleslaw" loading="lazy" decoding="async" width="1100" height="825">
+        </div>
+        <h3 class="card__name">Lebanese Fries Sandwich <b>$9.99</b></h3>
+        <p class="card__desc">A Lebanese street-food favourite. Crispy golden fries with creamy garlic sauce, pickles, coleslaw &amp; ketchup.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FEATURE BAND — the Apollo, full bleed ══
+     Deliberately NO invented spec numbers. The reference site floats grams and
+     sear temperatures beside its hero; we do not have those facts and will not
+     manufacture them. The only figures here are the board price and the board's
+     own "best seller" flag. -->
+<section class="feature" aria-labelledby="feature-h">
+  <div class="feature__bg" aria-hidden="true">
+    <img src="media/menu/apollo-burger.jpg" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="feature__scrim" aria-hidden="true"></div>
+  <div class="wrap feature__inner">
+    <span class="chapt__n">// 02.</span>
+    <h2 class="feature__h" id="feature-h">The Apollo</h2>
+    <p class="feature__lede">
+      Crispy chicken, melted cheese, lettuce, tomato, creamy mayo. The one the
+      counter sells most.
+    </p>
+    <p class="feature__price"><span>$14.99</span> Best seller</p>
+    <a class="btn btn--gold" href="https://www.doordash.com/en-CA/store/luqmat-al-malek-ottawa-51177463/" target="_blank" rel="noopener">Order the Apollo</a>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <header class="menu__head reveal">
+      <p class="eyebrow"><span class="rule"></span> The Menu</p>
+      <h2 class="h2 h2--center">Everything on the board</h2>
+      <p class="menu__note">
+        These are counter prices. Delivery apps charge more —
+        <a href="https://www.doordash.com/en-CA/store/luqmat-al-malek-ottawa-51177463/" target="_blank" rel="noopener">order on DoorDash</a>
+        for the convenience, or come in and pay this.
+      </p>
+    </header>
+
+    <div class="menu__cols">
+
+      <div class="menu__col reveal">
+        <h3 class="menu__cat"><span>Sandwiches</span></h3>
+        <p class="menu__sub">Choose your bread — pita or sub.</p>
+        <ul class="items">
+          <li><figure class="items__shot"><img src="media/menu/thumbs/fajita-sub.jpg" alt="Fajita Sub with chicken and grilled bell peppers" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Fajita Sub</span><i></i><b>$15.99</b></h4><p>Juicy seasoned chicken with grilled bell peppers, mushrooms, onions, sweet corn, melted cheese, pickles &amp; creamy special sauce.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/francisco-sub.jpg" alt="Francisco Sub with grilled chicken and melted cheese" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Francisco Sub</span><i></i><b>$14.99</b></h4><p>Tender grilled Francisco-style chicken with lettuce, pickles, sweet corn, melted cheese &amp; creamy mayo.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/tawouk.jpg" alt="Tawouk wrap with marinated chicken, fries and pickles" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Tawouk</span><i></i><b>$13.99</b></h4><p>Tender marinated chicken tawouk with garlic sauce, crispy fries, pickles &amp; fresh coleslaw.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/crispy-chicken-sub.jpg" alt="Crispy Chicken Sub with golden strips and pickles" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Crispy Chicken Sub</span><i></i><b>$13.99</b></h4><p>Golden crispy chicken strips with coleslaw, crispy fries, pickles &amp; signature cocktail sauce.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/bbq-chicken-sub.jpg" alt="BBQ Chicken Sub with smoky sauce and melted cheese" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>BBQ Chicken Sub</span><i></i><b>$14.99</b></h4><p>Crispy chicken coated in smoky BBQ sauce with melted cheese, onions, pickles &amp; creamy mayo.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/steak-sub.jpg" alt="Steak Sub with mushrooms, onions, peppers and melted cheese" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Steak Sub</span><i></i><b>$17.99</b></h4><p>Tender fillet steak grilled with mushrooms, onions &amp; bell peppers, topped with melted cheese, pickles, lettuce &amp; creamy mayo.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/beef-shawarma-pita.jpg" alt="Beef Shawarma Pita with tarator, pickles and tomatoes" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Beef Shawarma Pita</span><i></i><b>$15.99</b></h4><p>Tender seasoned beef shawarma with fresh biwaz salad, creamy tarator, pickles &amp; tomatoes.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/kafta-pita.jpg" alt="Kafta Pita with tomatoes and pickles" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Kafta Pita</span><i></i><b>$12.99</b></h4><p>Juicy Lebanese-style kafta with pickles, fresh tomatoes &amp; creamy mayo.</p></div></li>
+          <li><div class="items__body"><h4><span>Sujuk</span><i></i><b>$12.99</b></h4><p>Bold, flavourful sujuk with pickles, fresh tomatoes &amp; creamy mayo.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/makanek.jpg" alt="Makanek sub with Lebanese sausages, pickles and tomatoes" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Makanek</span><i></i><b>$12.99</b></h4><p>Savoury Lebanese makanek with pickles, fresh tomatoes &amp; creamy mayo.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/chicken-liver-sawda.jpg" alt="Chicken liver with fries and pomegranate molasses" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Chicken Liver (Sawda)</span><i></i><b>$13.99</b></h4><p>Seasoned chicken liver with garlic sauce, pickles, tomatoes, crispy fries &amp; a drizzle of sweet and tangy pomegranate molasses.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/rosto-sub.jpg" alt="Rosto Sub with beef, lettuce and tomatoes" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Rosto Sub</span><i></i><b>$15.99</b></h4><p>Tender Rosto beef with pickles, tomatoes, lettuce &amp; Al Malek sauce.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/shrimpisco-sub.jpg" alt="Shrimpisco Sub with grilled shrimp and lettuce" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Shrimpisco Sub</span><i></i><b>$15.99</b></h4><p>Grilled shrimp paired with Francisco-style chicken, lettuce &amp; pickles, finished with our signature Shrimpisco sauce.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/lebanese-fries-sandwich.jpg" alt="Lebanese Fries Sandwich with garlic sauce and coleslaw" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Lebanese Fries Sandwich</span><i></i><b>$9.99</b></h4><p>A Lebanese street-food favourite. Crispy golden fries with creamy garlic sauce, pickles, coleslaw &amp; ketchup.</p></div></li>
+        </ul>
+        <h3 class="menu__cat"><span>Sides</span></h3>
+        <ul class="items">
+          <li><div class="items__body"><h4><span>Fries</span><i></i><b>$5.99</b></h4><p>Hot, crispy &amp; golden.</p></div></li>
+          <li><div class="items__body"><h4><span>Onion Rings</span><i></i><b>$5.99</b></h4><p>Golden onion rings fried to a satisfying crunch.</p></div></li>
+          <li><div class="items__body"><h4><span>Mozzarella Sticks — 6 pieces</span><i></i><b>$6.99</b></h4><p>Crisp outside, hot and gooey inside.</p></div></li>
+          <li><div class="items__body"><h4><span>Coleslaw</span><i></i><b>$4.99</b></h4><p>Cool, creamy &amp; freshly prepared.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="menu__col reveal">
+        <h3 class="menu__cat"><span>Burgers</span></h3>
+        <p class="menu__sub">Add cheese — $0.50.</p>
+        <ul class="items">
+          <li><figure class="items__shot"><img src="media/menu/thumbs/classic-beef-burger.jpg" alt="Classic Beef Burger with grilled onions" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Classic Beef Burger</span><i></i><b>$10.99</b></h4><p>Juicy beef patty with grilled onions &amp; our house signature sauce.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/double-patty-burger.jpg" alt="Double Patty Burger with two beef patties" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Double Patty Burger</span><i></i><b>$14.99</b></h4><p>Two juicy beef patties with grilled onions &amp; our house signature sauce.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/chicken-burger.jpg" alt="Chicken Burger with lettuce, tomatoes and pickles" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Chicken Burger</span><i></i><b>$10.99</b></h4><p>Flavourful chicken patty with lettuce, tomatoes, pickles &amp; our house signature sauce.</p></div></li>
+          <li class="items__star"><figure class="items__shot"><img src="media/menu/thumbs/apollo-burger.jpg" alt="Apollo Burger with crispy chicken and melted cheese" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Apollo Burger</span> <span class="tag">Best seller</span><i></i><b>$14.99</b></h4><p>Golden crispy chicken with lettuce, tomatoes, melted cheese &amp; creamy mayo.</p></div></li>
+          <li><figure class="items__shot"><img src="media/menu/thumbs/stinger-burger.jpg" alt="Stinger Burger with grilled chicken breast" loading="lazy" decoding="async" width="256" height="192"></figure><div class="items__body"><h4><span>Stinger Burger</span><i></i><b>$14.99</b></h4><p>Tender grilled chicken breast with lettuce, tomatoes, melted cheese &amp; creamy mayo.</p></div></li>
+        </ul>
+
+        <h3 class="menu__cat"><span>Chicken</span></h3>
+        <ul class="items">
+          <li><div class="items__body"><h4><span>Chicken Wings — 6 pieces</span><i></i><b>$5.99</b></h4><p>Crispy, flavour-packed wings. BBQ, hot sauce or honey garlic.</p></div></li>
+          <li><div class="items__body"><h4><span>Chicken Wings — 12 pieces</span><i></i><b>$10.99</b></h4><p>Same wings, twice the plate.</p></div></li>
+          <li><div class="items__body"><h4><span>Crispy Chicken &amp; Fries Platter</span><i></i><b>$18.99</b></h4><p>Five golden crispy chicken strips with a generous side of fries, coleslaw &amp; house signature sauce.</p></div></li>
+          <li><div class="items__body"><h4><span>Kids Meal</span><i></i><b>$12.99</b></h4><p>Two crispy chicken strips served with fries — for our little kings and queens.</p></div></li>
+        </ul>
+
+        <h3 class="menu__cat"><span>Poutine</span></h3>
+        <ul class="items">
+          <li><div class="items__body"><h4><span>Original Poutine — small</span><i></i><b>$7.99</b></h4><p>Crispy golden fries loaded with cheese curds and smothered in hot, savoury gravy.</p></div></li>
+          <li><div class="items__body"><h4><span>Original Poutine — large</span><i></i><b>$12.99</b></h4><p>The same, for a table.</p></div></li>
+          <li><div class="items__body"><h4><span>Al Malek Poutine</span><i></i><b>+$3.99</b></h4><p>Turn any sandwich into a loaded poutine: fries topped with cheese, rich gravy and your choice of sandwich topping.</p></div></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="extras reveal">
+      <div class="extras__hero">
+        <p class="extras__k">Make it a combo</p>
+        <p class="extras__v">+$5.99</p>
+        <p class="extras__d">Crispy golden fries and a can of soda with any sandwich or burger.</p>
+      </div>
+      <div class="extras__grid">
+        <div><p class="extras__k">Extra dipping sauces <b>$1.99</b></p><p class="extras__d">Al Malek, garlic, BBQ, hot, cocktail, ketchup, mayo.</p></div>
+        <div><p class="extras__k">Soda <b>$1.99</b></p><p class="extras__d">Coke, Diet Coke, Pepsi, Diet Pepsi, 7UP, Crush.</p></div>
+        <div><p class="extras__k">Juice <b>$3.00</b></p><p class="extras__d">Glass bottle — mango peach, strawberry banana, mango, guava, pomegranate.</p></div>
+        <div><p class="extras__k">Water <b>$1.50</b></p><p class="extras__d">&nbsp;</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUOTE ══ -->
+<section class="quote">
+  <div class="wrap reveal">
+    <p class="quote__mark" aria-hidden="true">&ldquo;</p>
+    <blockquote class="quote__text">
+      Come hungry.<br><em>Eat like a king.</em>
+    </blockquote>
+    <p class="quote__attr">— Luqmat Al Malek</p>
+  </div>
+</section>
+
+<!-- ══ VISIT ══ -->
+<section class="visit" id="visit">
+  <div class="wrap visit__grid">
+    <div class="reveal">
+      <p class="eyebrow"><span class="rule"></span> Visit</p>
+      <h2 class="h2">Find the counter.</h2>
+
+      <dl class="facts">
+        <div><dt>Address</dt><dd>1749 Bank St, Unit&nbsp;1<br>Ottawa, ON K1V&nbsp;7Z4</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+16137625748">613-762-5748</a></dd></div>
+        <div><dt>Hours</dt><dd>Current hours are posted on our <a href="https://www.instagram.com/luqmat_almalek/" target="_blank" rel="noopener">Instagram</a>.</dd></div>
+        <div><dt>Delivery</dt><dd><a href="https://www.doordash.com/en-CA/store/luqmat-al-malek-ottawa-51177463/" target="_blank" rel="noopener">DoorDash</a></dd></div>
+      </dl>
+
+      <div class="visit__actions">
+        <a class="btn btn--gold" href="https://www.google.com/maps/search/?api=1&amp;query=1749+Bank+St+Unit+1+Ottawa+ON+K1V+7Z4" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn--ghost" href="tel:+16137625748">Call the counter</a>
+      </div>
+    </div>
+
+    <aside class="visit__card reveal">
+      <img src="media/crest-sm.png" alt="Luqmat Al Malek crest" width="150" height="150" loading="lazy" decoding="async">
+      <p class="visit__ar">لقمة الملك</p>
+      <p class="visit__tag">Every bite · fit for a king</p>
+      <a class="visit__ig" href="https://www.instagram.com/luqmat_almalek/" target="_blank" rel="noopener">@luqmat_almalek</a>
+    </aside>
+  </div>
+</section>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <p class="foot__mark">Luqmat Al&nbsp;Malek</p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="#story">The House</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a href="https://www.instagram.com/luqmat_almalek/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.doordash.com/en-CA/store/luqmat-al-malek-ottawa-51177463/" target="_blank" rel="noopener">DoorDash</a>
+    </nav>
+    <p class="foot__legal">© <span id="yr">2026</span> Luqmat Al Malek · 1749 Bank St, Unit 1, Ottawa</p>
+  </div>
+</footer>
+
+<!--
+  ==================================================================
+  OWNER-CONFIRMATION QUEUE - deliberately NOT rendered on the page.
+  Each line is a factual claim we cannot publish until the owner
+  confirms it. See ../notes.md and ../DECISIONS.md (D-006).
+
+  1. HALAL CERTIFICATION [STILL OPEN] - the brand publishes "100% Halal". It is a
+     certification claim and needs the certifying body named before it
+     goes live. This is the single highest-value missing line on the page.
+  2. IN-STORE PRICES - RESOLVED 2026-08-23. The counter menu board was
+     supplied; every price on this page is transcribed from it and is
+     allowlisted in scripts/check.mjs. See DECISIONS.md D-012.
+  3. TRADING HOURS [STILL OPEN] - "2:00 p.m. - 1:40 a.m." is the DoorDash figure,
+     not confirmed as the door hours.
+  4. PHONE [STILL OPEN] - 613-762-5748 is client-published on Instagram only, not
+     independently corroborated. Rendered, but confirm it.
+  5. MENU - RESOLVED 2026-08-23. Item names, descriptions and section
+     order now come from the board itself, not from the delivery listing.
+  6. PHOTOGRAPHY [STILL OPEN] - the hero film is the supplied concept video
+     (landscape cut v4, swapped in 2026-08-23 under D-013). It is AI-generated
+     and depicts a build that implies this kitchen and this product, so it is a
+     pitch asset, not a launch asset. Real in-store footage should replace or
+     extend it before launch. NOTE: the plate ratio in style.css is tied to this
+     clip being 16:9 - swapping in a portrait cut means changing both.
+  ==================================================================
+-->
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

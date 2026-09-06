@@ -1,0 +1,11 @@
+# Internal harness/working files — never serve these publicly.
+AGENTS.md
+README.md
+scripts/
+server.mjs
+package.json
+package-lock.json
+
+# The page no longer loads hero.mp4 — the canvas scrubs media/frames/ instead.
+# Kept locally as the frame source; 7.4MB of dead weight on the CDN.
+media/hero.mp4
